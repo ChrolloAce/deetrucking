@@ -15,7 +15,7 @@ class HeroContentManager {
     overline: 'COMMERCIAL TRANSPORT',
     headline: 'SAFE & ON-TIME DELIVERIES',
     ctaText: 'REQUEST QUOTE',
-    phoneNumber: '+54 11 4567 8900'
+    phoneNumber: '(305) 942-4054'
   };
 
   getContent(): HeroContent {

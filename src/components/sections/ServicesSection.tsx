@@ -134,8 +134,8 @@ export default function ServicesSection({ className = '' }: ServicesSectionProps
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
             <p className="text-lg text-text-muted max-w-2xl mx-auto">
-              We offer a wide range of specialized transport services 
-              to meet all your logistics needs.
+              We offer comprehensive commercial transport services 
+              throughout Florida and the Southeast United States.
             </p>
           </div>
 

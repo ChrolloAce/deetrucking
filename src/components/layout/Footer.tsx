@@ -17,9 +17,9 @@ interface SocialLink {
 
 class ContactManager {
   private contactInfo: ContactInfo = {
-    phone: '+54 11 4567 8900',
-    email: 'info@lucmar.com.ar',
-    address: 'Av. Corrientes 1234, CABA, Argentina'
+    phone: '(305) 942-4054',
+    email: 'info@grandbudapesttransport.com',
+    address: '12030 NE 16th Ave, Miami, FL 33161'
   };
 
   private socialLinks: SocialLink[] = [
@@ -53,10 +53,10 @@ export default function Footer({ className = '' }: FooterProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-heading font-bold tracking-wider">LUCMAR</h3>
+              <h3 className="text-xl font-heading font-bold tracking-wider">GRAND BUDAPEST TRANSPORT LLC</h3>
               <p className="text-text-muted leading-relaxed">
-                Leading commercial transport company with over 40 years of experience 
-                in the Argentine corridor.
+                Professional commercial transport services based in Miami, Florida. 
+                Serving the Southeast with reliable logistics solutions.
               </p>
             </div>
 
@@ -81,10 +81,10 @@ export default function Footer({ className = '' }: FooterProps) {
               <h4 className="text-lg font-heading font-semibold">Services</h4>
               <nav className="flex flex-col space-y-2">
                 {[
-                  'National Transport',
-                  'Specialized Cargo',
-                  'Satellite Tracking',
-                  'Palletized Goods'
+                  'Florida Transport',
+                  'Southeast Logistics',
+                  'GPS Tracking',
+                  'Commercial Freight'
                 ].map((service) => (
                   <span
                     key={service}
@@ -119,7 +119,7 @@ export default function Footer({ className = '' }: FooterProps) {
           {/* Bottom Bar */}
           <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-text-muted text-sm">
-              © 2024 LUCMAR. All rights reserved.
+              © 2024 Grand Budapest Transport LLC. All rights reserved.
             </p>
             
             <div className="flex items-center space-x-4 mt-4 md:mt-0">

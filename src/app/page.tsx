@@ -6,6 +6,7 @@ import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/sections/HeroSection';
 import ValuePropositionsSection from '@/components/sections/ValuePropositionsSection';
 import ServicesSection from '@/components/sections/ServicesSection';
+import FloatingCallButton from '@/components/ui/FloatingCallButton';
 
 export default function HomePage() {
   return (
@@ -19,6 +20,8 @@ export default function HomePage() {
       <ServicesSection />
       
       <Footer />
+      
+      <FloatingCallButton />
     </main>
   );
 }

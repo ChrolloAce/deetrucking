@@ -42,11 +42,11 @@ export default function Header({ className = '' }: HeaderProps) {
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <div className="flex items-center">
-            <h1 className="text-2xl font-heading font-bold text-white tracking-wider">
-              LUCMAR
-            </h1>
-          </div>
+                      <div className="flex items-center">
+              <h1 className="text-xl lg:text-2xl font-heading font-bold text-white tracking-wider">
+                GRAND BUDAPEST TRANSPORT
+              </h1>
+            </div>
 
           {/* Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
@@ -65,7 +65,7 @@ export default function Header({ className = '' }: HeaderProps) {
           {/* Contact Info */}
           <div className="hidden md:flex items-center text-white">
             <Phone className="w-4 h-4 mr-2" />
-            <span className="font-medium">+54 11 4567 8900</span>
+                          <span className="font-medium">(305) 942-4054</span>
           </div>
 
           {/* Mobile Menu Button */}

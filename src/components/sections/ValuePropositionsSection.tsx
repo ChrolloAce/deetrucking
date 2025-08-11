@@ -15,19 +15,19 @@ class ValuePropositionManager {
     {
       id: 'security',
       title: 'Security',
-      description: 'We hold Quality Management System Certification for JIS (Just in Time) delivery operations.',
+      description: 'DOT certified and fully insured transport services with comprehensive cargo protection and real-time monitoring.',
       icon: <Shield className="w-12 h-12" />
     },
     {
       id: 'commitment',
-      title: 'Commitment',
-      description: 'We provide logistics services focused on the Automotive Industry, with over 40 years in the market.',
+      title: 'Reliability',
+      description: 'Professional logistics services throughout Florida and the Southeast, committed to on-time delivery excellence.',
       icon: <Users className="w-12 h-12" />
     },
     {
-      id: 'nationwide',
-      title: 'Nationwide',
-      description: 'We are an international transport company operating primarily in the Argentine corridor.',
+      id: 'coverage',
+      title: 'Coverage',
+      description: 'Serving Miami-Dade, Broward, Palm Beach counties and beyond with comprehensive transport solutions.',
       icon: <MapPin className="w-12 h-12" />
     }
   ];

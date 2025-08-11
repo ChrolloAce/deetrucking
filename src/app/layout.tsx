@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'LUCMAR - Commercial Transport | Safe & On-Time Deliveries',
-  description: 'Leading commercial transport company with over 40 years of experience. Logistics services, satellite tracking, and safe deliveries throughout the Argentine corridor.',
-  keywords: 'commercial transport, logistics, Argentina, trucks, deliveries, satellite tracking',
-  authors: [{ name: 'LUCMAR' }],
+  title: 'Grand Budapest Transport LLC | Miami Commercial Transport Services',
+  description: 'Professional commercial transport services in Miami, Florida. DOT certified logistics company serving Florida and the Southeast with reliable freight solutions.',
+  keywords: 'commercial transport, Miami trucking, Florida logistics, freight services, DOT certified, Southeast transport',
+  authors: [{ name: 'Grand Budapest Transport LLC' }],
 }
 
 export const viewport = {
