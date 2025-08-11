@@ -10,11 +10,11 @@ interface NavigationItem {
 
 class NavigationManager {
   private items: NavigationItem[] = [
-    { label: 'INICIO', href: '#inicio' },
-    { label: 'UNIDADES', href: '#unidades' },
-    { label: 'NOSOTROS', href: '#nosotros' },
-    { label: 'COTIZACIÓN', href: '#cotizacion' },
-    { label: 'CONTACTO', href: '#contacto' },
+    { label: 'HOME', href: '#home' },
+    { label: 'FLEET', href: '#fleet' },
+    { label: 'ABOUT US', href: '#about' },
+    { label: 'QUOTE', href: '#quote' },
+    { label: 'CONTACT', href: '#contact' },
   ];
 
   getNavigationItems(): NavigationItem[] {

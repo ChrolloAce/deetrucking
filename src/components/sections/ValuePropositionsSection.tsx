@@ -14,20 +14,20 @@ class ValuePropositionManager {
   private propositions: ValueProposition[] = [
     {
       id: 'security',
-      title: 'Seguridad',
-      description: 'Recibimos la Certificación de Sistema de Gestión de Calidad de Operaciones de entrega JIS (Just in Time).',
+      title: 'Security',
+      description: 'We hold Quality Management System Certification for JIS (Just in Time) delivery operations.',
       icon: <Shield className="w-12 h-12" />
     },
     {
       id: 'commitment',
-      title: 'Compromiso',
-      description: 'Brindamos servicios logísticos orientados a la Industria Automotriz, con más de 40 años en el mercado.',
+      title: 'Commitment',
+      description: 'We provide logistics services focused on the Automotive Industry, with over 40 years in the market.',
       icon: <Users className="w-12 h-12" />
     },
     {
       id: 'nationwide',
-      title: 'A todo el país',
-      description: 'Somos una empresa de transporte internacional que opera principalmente en el corredor Argentino.',
+      title: 'Nationwide',
+      description: 'We are an international transport company operating primarily in the Argentine corridor.',
       icon: <MapPin className="w-12 h-12" />
     }
   ];

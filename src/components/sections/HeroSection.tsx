@@ -12,9 +12,9 @@ interface HeroContent {
 
 class HeroContentManager {
   private content: HeroContent = {
-    overline: 'TRANSPORTE COMERCIAL',
-    headline: 'ENTREGAS SEGURAS Y EN TIEMPO',
-    ctaText: 'SOLICITAR COTIZACIÓN',
+    overline: 'COMMERCIAL TRANSPORT',
+    headline: 'SAFE & ON-TIME DELIVERIES',
+    ctaText: 'REQUEST QUOTE',
     phoneNumber: '+54 11 4567 8900'
   };
 
@@ -23,14 +23,14 @@ class HeroContentManager {
   }
 
   handleCTAClick(): void {
-    const element = document.querySelector('#cotizacion');
+    const element = document.querySelector('#quote');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
 
   handleScrollIndicatorClick(): void {
-    const element = document.querySelector('#servicios');
+    const element = document.querySelector('#services');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -51,7 +51,7 @@ export default function HeroSection({
 
     return (
       <section 
-        id="inicio"
+        id="home"
         className={`relative min-h-screen flex items-center justify-start ${className}`}
         style={{
           backgroundImage: `url(${backgroundImage})`,
@@ -89,7 +89,7 @@ export default function HeroSection({
 
               {/* Phone Number */}
               <div className="flex items-center text-white">
-                <span className="text-sm font-medium mr-2">O llamanos:</span>
+                <span className="text-sm font-medium mr-2">Or call us:</span>
                 <div className="flex items-center">
                   <Phone className="w-4 h-4 mr-2" />
                   <span className="font-semibold text-lg">{content.phoneNumber}</span>

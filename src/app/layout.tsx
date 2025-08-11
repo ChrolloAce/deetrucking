@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'LUCMAR - Transporte Comercial | Entregas Seguras y en Tiempo',
-  description: 'Empresa líder en transporte comercial con más de 40 años de experiencia. Servicios de logística, seguimiento satelital y entregas seguras en todo el corredor argentino.',
-  keywords: 'transporte comercial, logística, Argentina, camiones, entregas, seguimiento satelital',
+  title: 'LUCMAR - Commercial Transport | Safe & On-Time Deliveries',
+  description: 'Leading commercial transport company with over 40 years of experience. Logistics services, satellite tracking, and safe deliveries throughout the Argentine corridor.',
+  keywords: 'commercial transport, logistics, Argentina, trucks, deliveries, satellite tracking',
   authors: [{ name: 'LUCMAR' }],
 }
 

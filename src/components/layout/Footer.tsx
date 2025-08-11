@@ -55,19 +55,19 @@ export default function Footer({ className = '' }: FooterProps) {
             <div className="space-y-4">
               <h3 className="text-2xl font-heading font-bold tracking-wider">LUCMAR</h3>
               <p className="text-text-muted leading-relaxed">
-                Empresa líder en transporte comercial con más de 40 años de experiencia 
-                en el corredor Argentino.
+                Leading commercial transport company with over 40 years of experience 
+                in the Argentine corridor.
               </p>
             </div>
 
             {/* Quick Links */}
             <div className="space-y-4">
-              <h4 className="text-lg font-heading font-semibold">Enlaces Rápidos</h4>
+              <h4 className="text-lg font-heading font-semibold">Quick Links</h4>
               <nav className="flex flex-col space-y-2">
-                {['Inicio', 'Unidades', 'Nosotros', 'Servicios', 'Contacto'].map((link) => (
+                {['Home', 'Fleet', 'About Us', 'Services', 'Contact'].map((link) => (
                   <a
                     key={link}
-                    href={`#${link.toLowerCase()}`}
+                    href={`#${link.toLowerCase().replace(' ', '-')}`}
                     className="text-text-muted hover:text-primary transition-colors duration-200"
                   >
                     {link}
@@ -78,13 +78,13 @@ export default function Footer({ className = '' }: FooterProps) {
 
             {/* Services */}
             <div className="space-y-4">
-              <h4 className="text-lg font-heading font-semibold">Servicios</h4>
+              <h4 className="text-lg font-heading font-semibold">Services</h4>
               <nav className="flex flex-col space-y-2">
                 {[
-                  'Transporte Nacional',
-                  'Carga Especializada',
-                  'Seguimiento Satelital',
-                  'Mercadería Paletizada'
+                  'National Transport',
+                  'Specialized Cargo',
+                  'Satellite Tracking',
+                  'Palletized Goods'
                 ].map((service) => (
                   <span
                     key={service}
@@ -98,7 +98,7 @@ export default function Footer({ className = '' }: FooterProps) {
 
             {/* Contact Info */}
             <div className="space-y-4">
-              <h4 className="text-lg font-heading font-semibold">Contacto</h4>
+              <h4 className="text-lg font-heading font-semibold">Contact</h4>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Phone className="w-4 h-4 text-primary flex-shrink-0" />
@@ -119,7 +119,7 @@ export default function Footer({ className = '' }: FooterProps) {
           {/* Bottom Bar */}
           <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-text-muted text-sm">
-              © 2024 LUCMAR. Todos los derechos reservados.
+              © 2024 LUCMAR. All rights reserved.
             </p>
             
             <div className="flex items-center space-x-4 mt-4 md:mt-0">

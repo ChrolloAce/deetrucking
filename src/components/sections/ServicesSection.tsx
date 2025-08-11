@@ -22,51 +22,51 @@ interface Service {
 class ServiceManager {
   private services: Service[] = [
     {
-      id: 'agil-descarga',
-      title: 'Ágil descarga',
-      description: 'Semiremolques aptos para el transporte de cualquier tipo de carga. Cubas y laterales rebatibles para una ágil carga y descarga.',
+      id: 'quick-loading',
+      title: 'Quick Loading',
+      description: 'Semi-trailers suitable for transporting any type of cargo. Tippers and folding sides for quick loading and unloading.',
       icon: <Truck className="w-8 h-8" />
     },
     {
-      id: 'contencion',
-      title: 'Contención',
-      description: 'Semiremolques con dispositivos fijos-contenedor.',
+      id: 'containment',
+      title: 'Containment',
+      description: 'Semi-trailers with fixed container devices.',
       icon: <Shield className="w-8 h-8" />
     },
     {
-      id: 'seguimiento-satelital',
-      title: 'Seguimiento satelital',
-      description: 'Camiones dotados con sistema de seguimiento satelital con cobertura en todo el país.',
+      id: 'satellite-tracking',
+      title: 'Satellite Tracking',
+      description: 'Trucks equipped with satellite tracking system with nationwide coverage.',
       icon: <Satellite className="w-8 h-8" />
     },
     {
-      id: 'sustancias-peligrosas',
-      title: 'Sustancias peligrosas',
-      description: 'Habilitados para y con experiencia en el traslado de sustancias peligrosas.',
+      id: 'hazardous-materials',
+      title: 'Hazardous Materials',
+      description: 'Authorized and experienced in transporting hazardous substances.',
       icon: <AlertTriangle className="w-8 h-8" />
     },
     {
-      id: 'mercaderia-paletizada',
-      title: 'Mercadería paletizada',
-      description: 'Semiremolques aptos ideales para mercadería paletizada.',
+      id: 'palletized-goods',
+      title: 'Palletized Goods',
+      description: 'Semi-trailers ideally suited for palletized merchandise.',
       icon: <Package className="w-8 h-8" />
     },
     {
-      id: 'tiempo-forma',
-      title: 'En tiempo y forma',
-      description: 'Modernos y potentes unidades permiten que sus productos lleguen en forma y tiempo al destino predeterminado.',
+      id: 'on-time-delivery',
+      title: 'On-Time Delivery',
+      description: 'Modern and powerful units ensure your products arrive on time and in perfect condition.',
       icon: <Clock className="w-8 h-8" />
     },
     {
-      id: 'carreton',
-      title: 'Carretón',
-      description: 'Naves 5tos de carga super bajo.',
+      id: 'low-loader',
+      title: 'Low Loader',
+      description: 'Super low-loading 5th wheel trailers.',
       icon: <Box className="w-8 h-8" />
     },
     {
-      id: 'logistica-integral',
-      title: 'Logística integral',
-      description: 'Soluciones completas de transporte y logística para su empresa.',
+      id: 'integrated-logistics',
+      title: 'Integrated Logistics',
+      description: 'Complete transport and logistics solutions for your business.',
       icon: <Navigation className="w-8 h-8" />
     }
   ];
@@ -125,17 +125,17 @@ export default function ServicesSection({ className = '' }: ServicesSectionProps
   const services = serviceManager.getServices();
 
     return (
-      <section id="servicios" className={`section-padding bg-white ${className}`}>
+      <section id="services" className={`section-padding bg-white ${className}`}>
         <div className="container-custom">
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl font-heading font-bold text-text mb-4">
-              Servicios
+              Services
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
             <p className="text-lg text-text-muted max-w-2xl mx-auto">
-              Ofrecemos una amplia gama de servicios de transporte especializados 
-              para satisfacer todas sus necesidades logísticas.
+              We offer a wide range of specialized transport services 
+              to meet all your logistics needs.
             </p>
           </div>
 
