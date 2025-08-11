@@ -42,16 +42,12 @@ interface HeroSectionProps {
   backgroundImage?: string;
 }
 
-class HeroSection extends React.Component<HeroSectionProps> {
-  private contentManager = new HeroContentManager();
-
-  render() {
-    const { 
-      className = '', 
-      backgroundImage = 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'
-    } = this.props;
-    
-    const content = this.contentManager.getContent();
+export default function HeroSection({ 
+  className = '', 
+  backgroundImage = 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'
+}: HeroSectionProps) {
+  const contentManager = new HeroContentManager();
+  const content = contentManager.getContent();
 
     return (
       <section 
@@ -85,7 +81,7 @@ class HeroSection extends React.Component<HeroSectionProps> {
             {/* CTA Section */}
             <div className="space-y-6">
               <button
-                onClick={() => this.contentManager.handleCTAClick()}
+                onClick={() => contentManager.handleCTAClick()}
                 className="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
               >
                 {content.ctaText}
@@ -106,7 +102,7 @@ class HeroSection extends React.Component<HeroSectionProps> {
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
           <button
-            onClick={() => this.contentManager.handleScrollIndicatorClick()}
+            onClick={() => contentManager.handleScrollIndicatorClick()}
             className="text-white hover:text-primary transition-colors duration-200 animate-bounce"
             aria-label="Scroll to next section"
           >
@@ -137,7 +133,4 @@ class HeroSection extends React.Component<HeroSectionProps> {
         </div>
       </section>
     );
-  }
 }
-
-export default HeroSection;

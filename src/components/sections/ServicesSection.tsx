@@ -120,12 +120,9 @@ interface ServicesSectionProps {
   className?: string;
 }
 
-class ServicesSection extends React.Component<ServicesSectionProps> {
-  private serviceManager = new ServiceManager();
-
-  render() {
-    const { className = '' } = this.props;
-    const services = this.serviceManager.getServices();
+export default function ServicesSection({ className = '' }: ServicesSectionProps) {
+  const serviceManager = new ServiceManager();
+  const services = serviceManager.getServices();
 
     return (
       <section id="servicios" className={`section-padding bg-white ${className}`}>
@@ -161,7 +158,4 @@ class ServicesSection extends React.Component<ServicesSectionProps> {
         </div>
       </section>
     );
-  }
 }
-
-export default ServicesSection;

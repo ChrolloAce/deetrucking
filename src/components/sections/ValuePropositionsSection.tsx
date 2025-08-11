@@ -82,12 +82,9 @@ interface ValuePropositionsSectionProps {
   className?: string;
 }
 
-class ValuePropositionsSection extends React.Component<ValuePropositionsSectionProps> {
-  private propositionManager = new ValuePropositionManager();
-
-  render() {
-    const { className = '' } = this.props;
-    const propositions = this.propositionManager.getPropositions();
+export default function ValuePropositionsSection({ className = '' }: ValuePropositionsSectionProps) {
+  const propositionManager = new ValuePropositionManager();
+  const propositions = propositionManager.getPropositions();
 
     return (
       <section className={`section-padding bg-background-light ${className}`}>
@@ -111,7 +108,4 @@ class ValuePropositionsSection extends React.Component<ValuePropositionsSectionP
         </div>
       </section>
     );
-  }
 }
-
-export default ValuePropositionsSection;

@@ -42,13 +42,10 @@ interface FooterProps {
   className?: string;
 }
 
-class Footer extends React.Component<FooterProps> {
-  private contactManager = new ContactManager();
-
-  render() {
-    const { className = '' } = this.props;
-    const contactInfo = this.contactManager.getContactInfo();
-    const socialLinks = this.contactManager.getSocialLinks();
+export default function Footer({ className = '' }: FooterProps) {
+  const contactManager = new ContactManager();
+  const contactInfo = contactManager.getContactInfo();
+  const socialLinks = contactManager.getSocialLinks();
 
     return (
       <footer className={`bg-background-dark text-white ${className}`}>
@@ -141,7 +138,4 @@ class Footer extends React.Component<FooterProps> {
         </div>
       </footer>
     );
-  }
 }
-
-export default Footer;
