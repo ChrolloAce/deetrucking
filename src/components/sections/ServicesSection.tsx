@@ -8,7 +8,7 @@ import {
   AlertTriangle, 
   Package, 
   Clock, 
-  Container,
+  Box,
   Navigation
 } from 'lucide-react';
 
@@ -61,7 +61,7 @@ class ServiceManager {
       id: 'carreton',
       title: 'Carretón',
       description: 'Naves 5tos de carga super bajo.',
-      icon: <Container className="w-8 h-8" />
+      icon: <Box className="w-8 h-8" />
     },
     {
       id: 'logistica-integral',

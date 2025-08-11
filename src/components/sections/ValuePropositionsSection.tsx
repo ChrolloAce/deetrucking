@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Shield, Handshake, MapPin } from 'lucide-react';
+import { Shield, Users, MapPin } from 'lucide-react';
 
 interface ValueProposition {
   id: string;
@@ -22,7 +22,7 @@ class ValuePropositionManager {
       id: 'commitment',
       title: 'Compromiso',
       description: 'Brindamos servicios logísticos orientados a la Industria Automotriz, con más de 40 años en el mercado.',
-      icon: <Handshake className="w-12 h-12" />
+      icon: <Users className="w-12 h-12" />
     },
     {
       id: 'nationwide',
