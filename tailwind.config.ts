@@ -10,21 +10,32 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#2E7BFF',
-          dark: '#0E3C7E',
-          light: '#5B9BFF',
+          DEFAULT: '#1E40AF',
+          dark: '#1E3A8A',
+          light: '#3B82F6',
+        },
+        secondary: {
+          DEFAULT: '#F59E0B',
+          dark: '#D97706',
+          light: '#FCD34D',
         },
         background: {
           DEFAULT: '#FFFFFF',
-          dark: '#0B1E38',
           light: '#F8FAFC',
+          dark: '#0F172A',
         },
         text: {
-          DEFAULT: '#1E1E1E',
+          DEFAULT: '#0F172A',
           light: '#FFFFFF',
-          muted: '#B0B0B0',
+          muted: '#64748B',
+          secondary: '#475569',
         },
-        border: '#E5E5E5',
+        border: {
+          DEFAULT: '#E2E8F0',
+          light: '#F1F5F9',
+        },
+        accent: '#10B981',
+        warning: '#EF4444',
       },
       fontFamily: {
         heading: ['Montserrat', 'sans-serif'],

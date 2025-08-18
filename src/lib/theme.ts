@@ -1,15 +1,20 @@
 export const theme = {
   colors: {
-    primary: "#2E7BFF",
-    primaryDark: "#0E3C7E",
-    primaryLight: "#5B9BFF",
+    primary: "#1E40AF",
+    primaryDark: "#1E3A8A",
+    primaryLight: "#3B82F6",
+    secondary: "#F59E0B",
     background: "#FFFFFF",
-    backgroundDark: "#0B1E38",
     backgroundLight: "#F8FAFC",
-    text: "#1E1E1E",
+    backgroundDark: "#0F172A",
+    text: "#0F172A",
     textLight: "#FFFFFF",
-    textMuted: "#B0B0B0",
-    border: "#E5E5E5"
+    textMuted: "#64748B",
+    textSecondary: "#475569",
+    border: "#E2E8F0",
+    borderLight: "#F1F5F9",
+    accent: "#10B981",
+    warning: "#EF4444"
   },
   fonts: {
     heading: "'Montserrat', sans-serif",

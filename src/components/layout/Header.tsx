@@ -38,7 +38,7 @@ export default function Header({ className = '' }: HeaderProps) {
   const navigationItems = navigationManager.getNavigationItems();
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 bg-background-dark/95 backdrop-blur-sm ${className}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-lg ${className}`}>
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}

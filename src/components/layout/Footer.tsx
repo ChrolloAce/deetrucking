@@ -49,68 +49,103 @@ export default function Footer({ className = '' }: FooterProps) {
 
     return (
       <footer className={`bg-background-dark text-white ${className}`}>
-        <div className="container-custom py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="container-custom py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Company Info */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-heading font-bold tracking-wider">ANNA MARSI LLC</h3>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-heading font-bold tracking-wider mb-2">ANNA MARSI LLC</h3>
+                <div className="w-12 h-0.5 bg-primary mb-4"></div>
+              </div>
               <p className="text-text-muted leading-relaxed">
                 Family-based trucking company in South Florida. Over 5 years of experience 
                 helping drivers build successful careers in the trucking industry.
               </p>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <span className="text-sm text-accent font-medium">Always Hiring</span>
+              </div>
             </div>
 
             {/* Quick Links */}
-            <div className="space-y-4">
-              <h4 className="text-lg font-heading font-semibold">Quick Links</h4>
-              <nav className="flex flex-col space-y-2">
-                {['Home', 'About Us', 'Services', 'Careers', 'Contact'].map((link) => (
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-lg font-heading font-semibold mb-2">Quick Links</h4>
+                <div className="w-8 h-0.5 bg-primary mb-4"></div>
+              </div>
+              <nav className="flex flex-col space-y-3">
+                {[
+                  { label: 'Home', href: '/' },
+                  { label: 'About Us', href: '/about' },
+                  { label: 'Services', href: '/services' },
+                  { label: 'Careers', href: '/#careers' },
+                  { label: 'Contact', href: '/contact' }
+                ].map((link) => (
                   <a
-                    key={link}
-                    href={`#${link.toLowerCase().replace(' ', '-')}`}
-                    className="text-text-muted hover:text-primary transition-colors duration-200"
+                    key={link.label}
+                    href={link.href}
+                    className="text-text-muted hover:text-primary transition-colors duration-200 hover:translate-x-1 transform transition-transform"
                   >
-                    {link}
+                    → {link.label}
                   </a>
                 ))}
               </nav>
             </div>
 
             {/* Services */}
-            <div className="space-y-4">
-              <h4 className="text-lg font-heading font-semibold">Services</h4>
-              <nav className="flex flex-col space-y-2">
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-lg font-heading font-semibold mb-2">Our Services</h4>
+                <div className="w-8 h-0.5 bg-primary mb-4"></div>
+              </div>
+              <nav className="flex flex-col space-y-3">
                 {[
-                  'Single Driver Jobs',
-                  'Team Driver Jobs',
-                  'Long Distance Routes',
-                  'Weekly Pay'
+                  'Long Distance Trucking',
+                  'Regional Routes',
+                  'General Freight',
+                  'Team Driving'
                 ].map((service) => (
                   <span
                     key={service}
-                    className="text-text-muted"
+                    className="text-text-muted flex items-center space-x-2"
                   >
-                    {service}
+                    <div className="w-1 h-1 bg-primary rounded-full"></div>
+                    <span>{service}</span>
                   </span>
                 ))}
               </nav>
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-4">
-              <h4 className="text-lg font-heading font-semibold">Contact</h4>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span className="text-text-muted">{contactInfo.phone}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span className="text-text-muted">{contactInfo.email}</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-text-muted">{contactInfo.address}</span>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-lg font-heading font-semibold mb-2">Contact Us</h4>
+                <div className="w-8 h-0.5 bg-primary mb-4"></div>
+              </div>
+              <div className="space-y-4">
+                <a
+                  href={`tel:${contactInfo.phone.replace(/\D/g, '')}`}
+                  className="flex items-center text-text-muted hover:text-primary transition-colors duration-200 group"
+                >
+                  <div className="p-2 bg-primary/10 rounded-lg mr-3 group-hover:bg-primary/20 transition-colors duration-200">
+                    <Phone className="w-4 h-4 text-primary" />
+                  </div>
+                  <span>{contactInfo.phone}</span>
+                </a>
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className="flex items-center text-text-muted hover:text-primary transition-colors duration-200 group"
+                >
+                  <div className="p-2 bg-primary/10 rounded-lg mr-3 group-hover:bg-primary/20 transition-colors duration-200">
+                    <Mail className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-sm">{contactInfo.email}</span>
+                </a>
+                <div className="flex items-start text-text-muted">
+                  <div className="p-2 bg-primary/10 rounded-lg mr-3 mt-0">
+                    <MapPin className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-sm leading-relaxed">{contactInfo.address}</span>
                 </div>
               </div>
             </div>
