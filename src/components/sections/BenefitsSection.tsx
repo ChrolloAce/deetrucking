@@ -74,7 +74,7 @@ class BenefitSectionComponent extends React.Component<BenefitSectionProps> {
     
     return (
       <div 
-        className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mb-20 lg:mb-32 ${
+        className={`flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16 xl:gap-20 mb-16 md:mb-20 lg:mb-24 xl:mb-32 ${
           index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
         }`}
       >
@@ -93,19 +93,19 @@ class BenefitSectionComponent extends React.Component<BenefitSectionProps> {
         {/* Content */}
         <div className="w-full lg:w-1/2 space-y-6">
           <div className="space-y-4">
-            <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+            <div className="inline-block bg-primary/10 text-primary px-3 py-2 md:px-4 rounded-full text-sm font-semibold">
               {benefit.highlight}
             </div>
             
-            <h3 className="text-3xl lg:text-4xl font-heading font-bold text-text leading-tight">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-text leading-tight">
               {benefit.title}
             </h3>
             
-            <p className="text-lg text-text-muted leading-relaxed">
+            <p className="text-base md:text-lg text-text-muted leading-relaxed">
               {benefit.description}
             </p>
             
-            <p className="text-text leading-relaxed">
+            <p className="text-base text-text leading-relaxed">
               {benefit.details}
             </p>
           </div>

@@ -61,40 +61,44 @@ export default function HeroSection({
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-hero-gradient"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         
         {/* Content */}
         <div className="relative z-10 container-custom">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             {/* Overline */}
-            <div className="mb-4">
-              <span className="text-primary font-semibold text-sm tracking-widest uppercase">
+            <div className="mb-6">
+              <span className="text-primary font-medium text-base tracking-wide">
                 {content.overline}
               </span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-8 leading-tight hero-text-shadow">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6 leading-tight">
               {content.headline}
             </h1>
 
+            {/* Subtitle */}
+            <p className="text-lg lg:text-xl text-white/90 mb-8 leading-relaxed max-w-2xl">
+              Join our family-oriented trucking company. Competitive pay, weekly payments, 
+              and over 5 years of experience helping drivers succeed.
+            </p>
+
             {/* CTA Section */}
-            <div className="space-y-6">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <button
                 onClick={() => contentManager.handleCTAClick()}
-                className="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
+                className="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
               >
                 {content.ctaText}
               </button>
 
-              {/* Phone Number */}
-              <div className="flex items-center text-white">
-                <span className="text-sm font-medium mr-2">Or call us:</span>
-                <div className="flex items-center">
-                  <Phone className="w-4 h-4 mr-2" />
-                  <span className="font-semibold text-lg">{content.phoneNumber}</span>
-                </div>
-              </div>
+              <a
+                href={`tel:${content.phoneNumber.replace(/\D/g, '')}`}
+                className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+              >
+                📞 {content.phoneNumber}
+              </a>
             </div>
           </div>
         </div>

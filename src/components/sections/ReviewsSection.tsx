@@ -85,7 +85,7 @@ class ReviewCard extends React.Component<ReviewCardProps> {
     const { review } = this.props;
     
     return (
-      <div className="bg-white p-8 rounded-2xl shadow-lg border border-border hover:shadow-xl transition-all duration-300 relative mx-4 h-full">
+      <div className="bg-white p-8 rounded-2xl shadow-lg border border-border hover:shadow-xl transition-all duration-300 relative mx-4 h-full mt-8">
         {/* Quote Icon */}
         <div className="absolute -top-4 -left-4 bg-primary rounded-full p-3">
           <Quote className="w-6 h-6 text-white" />
@@ -117,7 +117,7 @@ class ReviewCard extends React.Component<ReviewCardProps> {
             </div>
             <div className="text-right">
               <div className="bg-primary/10 text-primary px-4 py-2 rounded-full font-medium">
-                {review.rating}/5 ⭐
+                {review.yearsWithCompany}
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@ export default class ReviewsSection extends React.Component<ReviewsSectionProps,
           </div>
 
           {/* Carousel for All Screen Sizes */}
-          <div className="relative px-4">
+          <div className="relative px-4 pt-8">
             <div className="overflow-hidden rounded-2xl">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
