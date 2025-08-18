@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Grand Budapest Transport LLC | Miami Commercial Transport Services',
-  description: 'Professional commercial transport services in Miami, Florida. DOT certified logistics company serving Florida and the Southeast with reliable freight solutions.',
-  keywords: 'commercial transport, Miami trucking, Florida logistics, freight services, DOT certified, Southeast transport',
-  authors: [{ name: 'Grand Budapest Transport LLC' }],
+  title: 'Anna Marsi LLC | South Florida Trucking Jobs & Driver Opportunities',
+  description: 'Family-based trucking company in South Florida hiring drivers. Competitive pay: $0.65/mile single, $0.80/mile team. Weekly pay, 5+ years experience. Always hiring!',
+  keywords: 'trucking jobs Florida, driver jobs Miami, truck driver careers, South Florida trucking, CDL jobs, weekly pay trucking',
+  authors: [{ name: 'Anna Marsi LLC' }],
 }
 
 export const viewport = {

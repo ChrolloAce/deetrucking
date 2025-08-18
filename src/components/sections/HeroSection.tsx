@@ -12,9 +12,9 @@ interface HeroContent {
 
 class HeroContentManager {
   private content: HeroContent = {
-    overline: 'COMMERCIAL TRANSPORT',
-    headline: 'SAFE & ON-TIME DELIVERIES',
-    ctaText: 'REQUEST QUOTE',
+    overline: 'FAMILY-BASED TRUCKING COMPANY',
+    headline: 'BUILDING CAREERS IN TRUCKING',
+    ctaText: 'JOIN OUR TEAM',
     phoneNumber: '(305) 942-4054'
   };
 
@@ -23,7 +23,7 @@ class HeroContentManager {
   }
 
   handleCTAClick(): void {
-    const element = document.querySelector('#quote');
+    const element = document.querySelector('#careers');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }

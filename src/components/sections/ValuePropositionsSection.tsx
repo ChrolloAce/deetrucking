@@ -13,21 +13,21 @@ interface ValueProposition {
 class ValuePropositionManager {
   private propositions: ValueProposition[] = [
     {
-      id: 'security',
-      title: 'Security',
-      description: 'DOT certified and fully insured transport services with comprehensive cargo protection and real-time monitoring.',
-      icon: <Shield className="w-12 h-12" />
-    },
-    {
-      id: 'commitment',
-      title: 'Reliability',
-      description: 'Professional logistics services throughout Florida and the Southeast, committed to on-time delivery excellence.',
+      id: 'family',
+      title: 'Family Values',
+      description: 'Family-based trucking company committed to giving people opportunities to succeed and build lasting careers.',
       icon: <Users className="w-12 h-12" />
     },
     {
-      id: 'coverage',
-      title: 'Coverage',
-      description: 'Serving Miami-Dade, Broward, Palm Beach counties and beyond with comprehensive transport solutions.',
+      id: 'experience',
+      title: '5+ Years Strong',
+      description: 'Over 5 years of experience in South Florida, providing reliable trucking services and driver opportunities.',
+      icon: <Shield className="w-12 h-12" />
+    },
+    {
+      id: 'opportunities',
+      title: 'Always Hiring',
+      description: 'We are always looking for new drivers to join our team with competitive pay and weekly payments.',
       icon: <MapPin className="w-12 h-12" />
     }
   ];

@@ -11,9 +11,9 @@ interface NavigationItem {
 class NavigationManager {
   private items: NavigationItem[] = [
     { label: 'HOME', href: '#home' },
-    { label: 'FLEET', href: '#fleet' },
     { label: 'ABOUT US', href: '#about' },
-    { label: 'QUOTE', href: '#quote' },
+    { label: 'SERVICES', href: '#services' },
+    { label: 'CAREERS', href: '#careers' },
     { label: 'CONTACT', href: '#contact' },
   ];
 
@@ -44,7 +44,7 @@ export default function Header({ className = '' }: HeaderProps) {
           {/* Logo */}
                       <div className="flex items-center">
               <h1 className="text-xl lg:text-2xl font-heading font-bold text-white tracking-wider">
-                GRAND BUDAPEST TRANSPORT
+                ANNA MARSI LLC
               </h1>
             </div>
 
