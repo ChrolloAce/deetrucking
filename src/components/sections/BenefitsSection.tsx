@@ -52,7 +52,7 @@ class BenefitsManager {
       details: 'Our Freightliner trucks are regularly serviced and maintained to ensure your safety and comfort on the road. Advanced GPS, comfortable sleeper cabs, and reliable performance.',
       highlight: 'Latest Model Trucks',
       buttonText: 'View Our Fleet',
-      image: '/WhatsApp Image 2025-08-18 at 11.08.23 AM.jpeg',
+      image: '/truck5.jpeg',
       imagePosition: 'right'
     }
   ];
@@ -74,7 +74,7 @@ class BenefitSectionComponent extends React.Component<BenefitSectionProps> {
     
     return (
       <div 
-        className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mb-16 lg:mb-24 ${
+        className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mb-20 lg:mb-32 ${
           index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
         }`}
       >

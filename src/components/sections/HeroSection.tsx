@@ -44,7 +44,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ 
   className = '', 
-  backgroundImage = '/WhatsApp Image 2025-08-18 at 11.08.22 AM (4).jpeg'
+  backgroundImage = '/truck3.jpeg'
 }: HeroSectionProps) {
   const contentManager = new HeroContentManager();
   const content = contentManager.getContent();

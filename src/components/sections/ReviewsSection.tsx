@@ -85,46 +85,43 @@ class ReviewCard extends React.Component<ReviewCardProps> {
     const { review } = this.props;
     
     return (
-      <div className="bg-white p-8 rounded-2xl shadow-lg border border-border hover:shadow-xl transition-all duration-300 relative">
+      <div className="bg-white p-8 rounded-2xl shadow-lg border border-border hover:shadow-xl transition-all duration-300 relative mx-4 h-full">
         {/* Quote Icon */}
         <div className="absolute -top-4 -left-4 bg-primary rounded-full p-3">
           <Quote className="w-6 h-6 text-white" />
         </div>
 
         {/* Stars */}
-        <div className="flex items-center mb-4">
+        <div className="flex items-center mb-6">
           {this.renderStars(review.rating)}
         </div>
 
         {/* Review Text */}
-        <p className="text-text-muted leading-relaxed mb-6 italic">
+        <p className="text-text-muted leading-relaxed mb-8 italic text-lg">
           "{review.review}"
         </p>
 
         {/* Reviewer Info */}
-        <div className="border-t pt-4">
+        <div className="border-t pt-6">
           <div className="flex items-center justify-between">
             <div>
-              <h4 className="font-heading font-semibold text-text text-lg">
+              <h4 className="font-heading font-semibold text-text text-xl">
                 {review.name}
               </h4>
-              <p className="text-primary font-medium">
+              <p className="text-primary font-medium text-lg">
                 {review.role}
               </p>
-              <p className="text-text-muted text-sm">
+              <p className="text-text-muted">
                 {review.yearsWithCompany} • {review.location}
               </p>
             </div>
             <div className="text-right">
-              <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
-                {review.rating}/5 Stars
+              <div className="bg-primary/10 text-primary px-4 py-2 rounded-full font-medium">
+                {review.rating}/5 ⭐
               </div>
             </div>
           </div>
         </div>
-
-        {/* Decorative Element */}
-        <div className="absolute bottom-0 right-0 w-20 h-20 bg-primary/5 rounded-full transform translate-x-10 translate-y-10"></div>
       </div>
     );
   }
@@ -185,14 +182,14 @@ export default class ReviewsSection extends React.Component<ReviewsSectionProps,
           </div>
 
           {/* Carousel for All Screen Sizes */}
-          <div className="relative">
-            <div className="overflow-hidden">
+          <div className="relative px-4">
+            <div className="overflow-hidden rounded-2xl">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentReviewIndex * 100}%)` }}
               >
                 {reviews.map((review) => (
-                  <div key={review.id} className="w-full flex-shrink-0 px-4">
+                  <div key={review.id} className="w-full flex-shrink-0 px-8">
                     <ReviewCard review={review} />
                   </div>
                 ))}
@@ -231,19 +228,7 @@ export default class ReviewsSection extends React.Component<ReviewsSectionProps,
             </div>
           </div>
 
-          {/* Overall Rating */}
-          <div className="text-center mt-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg inline-block">
-              <div className="flex items-center justify-center mb-4">
-                {Array.from({ length: 5 }, (_, i) => (
-                  <Star key={i} className="w-8 h-8 text-yellow-400 fill-current mx-1" />
-                ))}
-              </div>
-              <div className="text-3xl font-heading font-bold text-text mb-2">5.0 out of 5</div>
-              <div className="text-text-muted">Based on driver reviews</div>
-              <div className="text-primary font-semibold mt-2">100% Recommend Anna Marsi LLC</div>
-            </div>
-          </div>
+
         </div>
 
         {/* Background Pattern */}

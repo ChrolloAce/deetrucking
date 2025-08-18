@@ -15,35 +15,35 @@ class TruckGalleryManager {
   private images: TruckImage[] = [
     {
       id: 'truck-1',
-      src: '/WhatsApp Image 2025-08-18 at 11.08.22 AM (2).jpeg',
+      src: '/truck1.jpeg',
       alt: 'Anna Marsi LLC White Freightliner Truck',
       title: 'Professional Fleet',
       description: 'Modern Freightliner trucks maintained to the highest standards'
     },
     {
       id: 'truck-2', 
-      src: '/WhatsApp Image 2025-08-18 at 11.08.22 AM (3).jpeg',
+      src: '/truck2.jpeg',
       alt: 'Anna Marsi LLC Truck Rear View',
       title: 'Quality Equipment',
       description: 'Well-maintained trucks with excellent safety records'
     },
     {
       id: 'truck-3',
-      src: '/WhatsApp Image 2025-08-18 at 11.08.22 AM (4).jpeg',
+      src: '/truck3.jpeg',
       alt: 'Anna Marsi LLC Truck Front View',
       title: 'Modern Technology',
       description: 'Latest model trucks with advanced safety features'
     },
     {
       id: 'truck-4',
-      src: '/WhatsApp Image 2025-08-18 at 11.08.22 AM (5).jpeg',
+      src: '/truck4.jpeg',
       alt: 'Anna Marsi LLC Truck Close-up',
       title: 'Reliable Performance',
       description: 'Dependable trucks for long-distance hauling'
     },
     {
       id: 'truck-5',
-      src: '/WhatsApp Image 2025-08-18 at 11.08.23 AM.jpeg',
+      src: '/truck5.jpeg',
       alt: 'Anna Marsi LLC Truck Detail',
       title: 'Driver Comfort',
       description: 'Comfortable cabs designed for professional drivers'
