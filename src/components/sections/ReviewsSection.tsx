@@ -184,18 +184,11 @@ export default class ReviewsSection extends React.Component<ReviewsSectionProps,
             </p>
           </div>
 
-          {/* Desktop Grid View */}
-          <div className="hidden lg:grid lg:grid-cols-3 gap-8 mb-12">
-            {reviews.slice(0, 3).map((review) => (
-              <ReviewCard key={review.id} review={review} />
-            ))}
-          </div>
-
-          {/* Mobile Carousel View */}
-          <div className="lg:hidden relative">
+          {/* Carousel for All Screen Sizes */}
+          <div className="relative">
             <div className="overflow-hidden">
               <div 
-                className="flex transition-transform duration-300 ease-in-out"
+                className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentReviewIndex * 100}%)` }}
               >
                 {reviews.map((review) => (
@@ -206,22 +199,24 @@ export default class ReviewsSection extends React.Component<ReviewsSectionProps,
               </div>
             </div>
 
-            {/* Mobile Navigation */}
-            <div className="flex items-center justify-center mt-8 space-x-4">
+            {/* Navigation */}
+            <div className="flex items-center justify-center mt-12 space-x-6">
               <button
                 onClick={this.handlePreviousReview}
-                className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 text-primary hover:bg-primary hover:text-white"
+                className="p-4 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 text-primary hover:bg-primary hover:text-white border-2 border-primary/20 hover:border-primary"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="w-6 h-6" />
               </button>
               
-              <div className="flex space-x-2">
+              <div className="flex space-x-3">
                 {reviews.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => this.setState({ currentReviewIndex: index })}
-                    className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                      index === currentReviewIndex ? 'bg-primary' : 'bg-border'
+                    className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                      index === currentReviewIndex 
+                        ? 'bg-primary scale-125' 
+                        : 'bg-border hover:bg-primary/50'
                     }`}
                   />
                 ))}
@@ -229,18 +224,11 @@ export default class ReviewsSection extends React.Component<ReviewsSectionProps,
               
               <button
                 onClick={this.handleNextReview}
-                className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 text-primary hover:bg-primary hover:text-white"
+                className="p-4 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 text-primary hover:bg-primary hover:text-white border-2 border-primary/20 hover:border-primary"
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-6 h-6" />
               </button>
             </div>
-          </div>
-
-          {/* Additional Reviews for Desktop */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-8 mt-8">
-            {reviews.slice(3).map((review) => (
-              <ReviewCard key={review.id} review={review} />
-            ))}
           </div>
 
           {/* Overall Rating */}

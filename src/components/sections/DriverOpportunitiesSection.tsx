@@ -96,33 +96,42 @@ class OpportunityCard extends React.Component<OpportunityCardProps> {
     
     return (
       <div 
-        className="group bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-border hover:border-primary/30"
+        className="group bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/30 transform hover:-translate-y-1"
         style={{ 
           animationDelay: `${index * 0.1}s`,
         }}
       >
-        {/* Icon */}
-        <div className="flex justify-center mb-4">
-          <div className="p-3 bg-primary/10 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+        {/* Icon and Pay */}
+        <div className="flex items-start justify-between mb-6">
+          <div className="p-4 bg-primary/10 rounded-xl text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
             {opportunity.icon}
+          </div>
+          <div className="text-right">
+            <div className="text-primary font-bold text-lg bg-primary/10 px-4 py-2 rounded-xl">
+              {opportunity.pay}
+            </div>
           </div>
         </div>
 
         {/* Content */}
-        <div className="text-center">
-          <h3 className="text-lg font-heading font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
+        <div className="space-y-4">
+          <h3 className="text-xl font-heading font-semibold text-text group-hover:text-primary transition-colors duration-300">
             {opportunity.title}
           </h3>
-          <div className="text-primary font-semibold text-sm mb-3 bg-primary/10 px-3 py-1 rounded-full inline-block">
-            {opportunity.pay}
-          </div>
-          <p className="text-sm text-text-muted leading-relaxed">
+          
+          <p className="text-text-muted leading-relaxed">
             {opportunity.description}
           </p>
-        </div>
 
-        {/* Hover Effect */}
-        <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+          <div className="pt-4">
+            <a
+              href="tel:(305) 942-4054"
+              className="text-primary font-medium hover:text-primary-dark transition-colors duration-200 inline-flex items-center space-x-2"
+            >
+              <span>Learn More →</span>
+            </a>
+          </div>
+        </div>
       </div>
     );
   }
@@ -152,7 +161,7 @@ export default function DriverOpportunitiesSection({ className = '' }: DriverOpp
         </div>
 
         {/* Opportunities Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {opportunities.map((opportunity, index) => (
             <OpportunityCard
               key={opportunity.id}

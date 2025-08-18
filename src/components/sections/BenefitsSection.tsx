@@ -1,98 +1,59 @@
 'use client';
 
 import React from 'react';
-import { 
-  DollarSign, 
-  Calendar, 
-  Shield, 
-  Heart, 
-  Users, 
-  Clock,
-  Award,
-  Home,
-  Phone,
-  Truck
-} from 'lucide-react';
 
 interface Benefit {
   id: string;
   title: string;
   description: string;
-  icon: React.ReactNode;
-  highlight?: string;
+  details: string;
+  image: string;
+  highlight: string;
+  buttonText: string;
+  imagePosition: 'left' | 'right';
 }
 
 class BenefitsManager {
   private benefits: Benefit[] = [
     {
       id: 'competitive-pay',
-      title: 'Competitive Pay',
-      description: 'Industry-leading pay rates with opportunities for performance bonuses and overtime.',
+      title: 'Competitive Pay Structure',
+      description: 'We offer industry-leading pay rates that reward your hard work and dedication. Our transparent pay structure ensures you know exactly what you\'ll earn.',
+      details: 'Single drivers earn $0.65 per mile, while team drivers can earn up to $0.80 per mile or 30% of gross pay. Performance bonuses and safety incentives provide additional earning opportunities.',
       highlight: '$0.65 - $0.80 per mile',
-      icon: <DollarSign className="w-8 h-8" />
+      buttonText: 'Learn About Pay',
+      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      imagePosition: 'left'
     },
     {
-      id: 'weekly-pay',
-      title: 'Weekly Payments',
-      description: 'Reliable weekly pay schedule ensures consistent income for you and your family.',
-      highlight: 'Every Friday',
-      icon: <Calendar className="w-8 h-8" />
-    },
-    {
-      id: 'health-insurance',
-      title: 'Health Benefits',
-      description: 'Comprehensive health insurance options to keep you and your family covered.',
-      highlight: 'Full Coverage Available',
-      icon: <Heart className="w-8 h-8" />
-    },
-    {
-      id: 'safety-first',
-      title: 'Safety Program',
-      description: 'Comprehensive safety training and equipment to ensure your protection on the road.',
-      highlight: '100% Safety Record',
-      icon: <Shield className="w-8 h-8" />
+      id: 'weekly-payments',
+      title: 'Reliable Weekly Payments',
+      description: 'Never worry about cash flow again. Our consistent weekly payment schedule helps you budget and plan for your family\'s needs.',
+      details: 'Every Friday, your earnings are deposited directly into your account. No waiting, no delays - just reliable income you can count on week after week.',
+      highlight: 'Paid Every Friday',
+      buttonText: 'Payment Details',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      imagePosition: 'right'
     },
     {
       id: 'family-culture',
-      title: 'Family Environment',
-      description: 'Join a family-oriented company that values your success and work-life balance.',
-      highlight: 'Family Values',
-      icon: <Users className="w-8 h-8" />
+      title: 'Family-Oriented Environment',
+      description: 'At Anna Marsi LLC, you\'re not just an employee - you\'re family. We create a supportive environment where drivers thrive.',
+      details: 'With over 5 years in business, we\'ve built a reputation for treating our drivers with respect and providing opportunities for career growth. Our family values guide everything we do.',
+      highlight: '5+ Years of Family Values',
+      buttonText: 'Meet Our Team',
+      image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      imagePosition: 'left'
     },
     {
-      id: 'flexible-schedule',
-      title: 'Flexible Scheduling',
-      description: 'Work schedules designed to accommodate your personal life and preferences.',
-      highlight: 'Work-Life Balance',
-      icon: <Clock className="w-8 h-8" />
-    },
-    {
-      id: 'performance-bonuses',
-      title: 'Performance Bonuses',
-      description: 'Additional earning opportunities through safety bonuses and performance incentives.',
-      highlight: 'Extra Income',
-      icon: <Award className="w-8 h-8" />
-    },
-    {
-      id: 'home-time',
-      title: 'Home Time',
-      description: 'Regular home time to spend with family and recharge for the next run.',
-      highlight: 'Regular Home Time',
-      icon: <Home className="w-8 h-8" />
-    },
-    {
-      id: 'support',
-      title: '24/7 Support',
-      description: 'Round-the-clock dispatch and support team to assist you whenever needed.',
-      highlight: 'Always Available',
-      icon: <Phone className="w-8 h-8" />
-    },
-    {
-      id: 'equipment',
-      title: 'Modern Equipment',
-      description: 'Well-maintained, modern trucks with the latest safety and comfort features.',
-      highlight: 'Latest Models',
-      icon: <Truck className="w-8 h-8" />
+      id: 'modern-fleet',
+      title: 'Modern, Well-Maintained Fleet',
+      description: 'Drive with confidence in our fleet of modern, well-maintained trucks equipped with the latest safety and comfort features.',
+      details: 'Our Freightliner trucks are regularly serviced and maintained to ensure your safety and comfort on the road. Advanced GPS, comfortable sleeper cabs, and reliable performance.',
+      highlight: 'Latest Model Trucks',
+      buttonText: 'View Our Fleet',
+      image: '/WhatsApp Image 2025-08-18 at 11.08.23 AM.jpeg',
+      imagePosition: 'right'
     }
   ];
 
@@ -101,48 +62,69 @@ class BenefitsManager {
   }
 }
 
-interface BenefitCardProps {
+interface BenefitSectionProps {
   benefit: Benefit;
   index: number;
 }
 
-class BenefitCard extends React.Component<BenefitCardProps> {
+class BenefitSectionComponent extends React.Component<BenefitSectionProps> {
   render() {
     const { benefit, index } = this.props;
+    const isImageLeft = benefit.imagePosition === 'left';
     
     return (
       <div 
-        className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/30 transform hover:-translate-y-1"
-        style={{ 
-          animationDelay: `${index * 0.1}s`,
-        }}
+        className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mb-16 lg:mb-24 ${
+          index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
+        }`}
       >
-        {/* Icon */}
-        <div className="flex justify-center mb-4">
-          <div className="p-4 bg-primary/10 rounded-xl text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-            {benefit.icon}
+        {/* Image */}
+        <div className="w-full lg:w-1/2">
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src={benefit.image}
+              alt={benefit.title}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
         </div>
 
         {/* Content */}
-        <div className="text-center">
-          <h3 className="text-xl font-heading font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
-            {benefit.title}
-          </h3>
-          
-          {benefit.highlight && (
-            <div className="text-primary font-bold text-sm mb-3 bg-primary/10 px-4 py-2 rounded-full inline-block">
+        <div className="w-full lg:w-1/2 space-y-6">
+          <div className="space-y-4">
+            <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
               {benefit.highlight}
             </div>
-          )}
-          
-          <p className="text-sm text-text-muted leading-relaxed">
-            {benefit.description}
-          </p>
-        </div>
+            
+            <h3 className="text-3xl lg:text-4xl font-heading font-bold text-text leading-tight">
+              {benefit.title}
+            </h3>
+            
+            <p className="text-lg text-text-muted leading-relaxed">
+              {benefit.description}
+            </p>
+            
+            <p className="text-text leading-relaxed">
+              {benefit.details}
+            </p>
+          </div>
 
-        {/* Decorative Element */}
-        <div className="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-full transform translate-x-8 -translate-y-8 group-hover:bg-primary/10 transition-colors duration-300"></div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href="tel:(305) 942-4054"
+              className="btn-primary inline-flex items-center justify-center space-x-2"
+            >
+              <span>{benefit.buttonText}</span>
+            </a>
+            <a
+              href="mailto:miamibrightstar@gmail.com"
+              className="btn-secondary inline-flex items-center justify-center space-x-2"
+            >
+              <span>Contact Us</span>
+            </a>
+          </div>
+        </div>
       </div>
     );
   }
@@ -160,21 +142,21 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
     <section id="benefits" className={`section-padding bg-white ${className}`}>
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-heading font-bold text-text mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-text mb-6">
             Why Choose Anna Marsi LLC?
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-lg text-text-muted max-w-3xl mx-auto">
-            We offer comprehensive benefits and a supportive work environment that puts 
-            our drivers first. Join our family and experience the Anna Marsi difference.
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+          <p className="text-xl text-text-muted max-w-3xl mx-auto leading-relaxed">
+            We offer more than just a job - we provide a career path with real benefits, 
+            competitive pay, and a family environment where drivers thrive.
           </p>
         </div>
 
-        {/* Benefits Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
+        {/* Benefits Sections */}
+        <div className="space-y-0">
           {benefits.map((benefit, index) => (
-            <BenefitCard
+            <BenefitSectionComponent
               key={benefit.id}
               benefit={benefit}
               index={index}
@@ -182,38 +164,30 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-center text-white">
-          <h3 className="text-3xl font-heading font-bold mb-4">
-            Ready to Join Our Team?
+        {/* Final Call to Action */}
+        <div className="bg-gradient-to-r from-primary to-primary-dark rounded-3xl p-12 text-center text-white mt-20">
+          <h3 className="text-3xl lg:text-4xl font-heading font-bold mb-6">
+            Ready to Start Your Career with Us?
           </h3>
-          <p className="text-white/90 mb-6 max-w-2xl mx-auto text-lg">
-            Experience the benefits of working with a family-oriented trucking company 
-            that truly cares about your success and well-being.
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
+            Join the Anna Marsi LLC family today and experience the difference of working 
+            with a company that truly values its drivers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:(305) 942-4054"
-              className="bg-white text-primary hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-colors duration-200 inline-flex items-center space-x-2"
+              className="bg-white text-primary hover:bg-gray-100 font-semibold py-4 px-8 rounded-xl transition-colors duration-200 inline-flex items-center space-x-2 text-lg"
             >
-              <Phone className="w-5 h-5" />
-              <span>Call Now: (305) 942-4054</span>
+              <span>📞 Call Now: (305) 942-4054</span>
             </a>
             <a
               href="mailto:miamibrightstar@gmail.com"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-8 rounded-lg transition-all duration-200 inline-flex items-center space-x-2"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-8 rounded-xl transition-all duration-200 inline-flex items-center space-x-2 text-lg"
             >
-              <span>Email Us Today</span>
+              <span>✉️ Email Us Today</span>
             </a>
           </div>
         </div>
-      </div>
-
-      {/* Background Decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-5">
-        <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary rounded-full"></div>
-        <div className="absolute -bottom-32 -left-32 w-48 h-48 bg-primary rounded-full"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-primary rounded-full"></div>
       </div>
     </section>
   );
