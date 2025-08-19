@@ -16,7 +16,8 @@ class CallButtonManager {
   }
 
   handleCall(): void {
-    window.open(`tel:${this.phoneNumber}`, '_self');
+    const cleanNumber = this.phoneNumber.replace(/\D/g, '');
+    window.location.href = `tel:+1${cleanNumber}`;
   }
 
   getPhoneNumber(): string {
@@ -38,7 +39,7 @@ export default function FloatingCallButton({
     <div className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 ${className}`}>
       <button
         onClick={() => callManager.handleCall()}
-        className="group bg-primary hover:bg-primary-dark text-white p-3 sm:p-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center"
+        className="group bg-primary hover:bg-primary-dark text-white p-3 sm:p-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-full"
         aria-label={`Call ${callManager.formatPhoneForDisplay()}`}
       >
         <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -51,7 +52,7 @@ export default function FloatingCallButton({
       </button>
 
       {/* Ripple Effect */}
-      <div className="absolute inset-0 bg-primary opacity-20 animate-ping w-12 h-12 sm:w-16 sm:h-16"></div>
+      <div className="absolute inset-0 bg-primary opacity-20 animate-ping w-12 h-12 sm:w-16 sm:h-16 rounded-full"></div>
     </div>
   );
 }

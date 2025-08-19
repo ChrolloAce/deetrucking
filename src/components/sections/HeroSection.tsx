@@ -68,7 +68,7 @@ export default function HeroSection({
           <div className="max-w-3xl">
             {/* Overline */}
             <div className="mb-6">
-              <span className="text-white font-medium text-base tracking-wide text-center block">
+              <span className="text-white font-medium text-base tracking-wide">
                 {content.overline}
               </span>
             </div>
