@@ -74,7 +74,7 @@ class BenefitSectionComponent extends React.Component<BenefitSectionProps> {
     
     return (
       <div 
-        className={`flex flex-col lg:flex-row items-center gap-16 md:gap-20 lg:gap-24 xl:gap-32 mb-24 md:mb-32 lg:mb-40 xl:mb-48 ${
+        className={`flex flex-col lg:flex-row items-center gap-16 md:gap-20 lg:gap-24 xl:gap-32 ${
           index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
         }`}
       >
@@ -154,7 +154,7 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
         </div>
 
         {/* Benefits Sections */}
-        <div className="space-y-0">
+        <div className="space-y-16 md:space-y-20 lg:space-y-24 xl:space-y-32">
           {benefits.map((benefit, index) => (
             <BenefitSectionComponent
               key={benefit.id}
