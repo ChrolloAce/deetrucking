@@ -124,7 +124,7 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info) => (
-              <div key={info.id} className="text-center p-6 bg-background-light rounded-xl">
+              <div key={info.id} className="text-center p-6 bg-background-light rounded-xl hover:shadow-lg transition-all duration-200">
                 <div className="flex justify-center mb-4">
                   <div className="p-3 bg-primary/10 rounded-lg text-primary">
                     {info.icon}
@@ -136,7 +136,7 @@ export default function ContactPage() {
                 {info.href ? (
                   <a
                     href={info.href}
-                    className="text-text-muted hover:text-primary transition-colors duration-200"
+                    className="text-text-muted hover:text-primary transition-colors duration-200 font-medium"
                   >
                     {info.value}
                   </a>
@@ -303,13 +303,24 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="bg-gray-200 rounded-lg h-64 mb-8 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <MapPin className="w-12 h-12 mx-auto mb-2" />
-                  <p>Interactive Map</p>
-                  <p className="text-sm">1758 NE 163rd Street, North Miami Beach, FL 33162</p>
-                </div>
+              {/* Interactive Google Map */}
+              <div className="rounded-lg h-80 mb-8 overflow-hidden shadow-xl border border-gray-200">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3590.123!2d-80.164!3d25.923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s1758%20NE%20163rd%20St%2C%20North%20Miami%20Beach%2C%20FL%2033162!5e0!3m2!1sen!2sus!4v1692345678!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Anna Marsi LLC - 1758 NE 163rd Street, North Miami Beach, FL 33162"
+                ></iframe>
+              </div>
+              
+              {/* Map Instructions */}
+              <div className="text-center text-sm text-text-muted mb-8">
+                <p>📍 Click on the map to get directions to our location</p>
+                <p className="mt-1">1758 NE 163rd Street, North Miami Beach, FL 33162</p>
               </div>
 
               {/* Quick Contact */}

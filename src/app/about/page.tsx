@@ -13,13 +13,7 @@ interface Stat {
   icon: React.ReactNode;
 }
 
-interface TeamMember {
-  id: string;
-  name: string;
-  role: string;
-  description: string;
-  image: string;
-}
+
 
 class AboutManager {
   private stats: Stat[] = [
@@ -49,43 +43,18 @@ class AboutManager {
     }
   ];
 
-  private teamMembers: TeamMember[] = [
-    {
-      id: 'founder',
-      name: 'Anna Marsi',
-      role: 'Founder & CEO',
-      description: 'With over 15 years in the transportation industry, Anna founded the company with a vision of creating a family-oriented trucking business.',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616c79a5b73?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
-    },
-    {
-      id: 'operations',
-      name: 'Carlos Rodriguez',
-      role: 'Operations Manager',
-      description: 'Carlos ensures our fleet runs smoothly and our drivers have everything they need for successful routes.',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
-    },
-    {
-      id: 'safety',
-      name: 'Maria Santos',
-      role: 'Safety Director',
-      description: 'Maria oversees our safety programs and ensures all drivers receive proper training and support.',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
-    }
-  ];
+
 
   getStats(): Stat[] {
     return this.stats;
   }
 
-  getTeamMembers(): TeamMember[] {
-    return this.teamMembers;
-  }
+
 }
 
 export default function AboutPage() {
   const aboutManager = new AboutManager();
   const stats = aboutManager.getStats();
-  const teamMembers = aboutManager.getTeamMembers();
 
   return (
     <main className="min-h-screen bg-background-light">
@@ -239,43 +208,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="section-padding bg-background-light">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-text mb-6">
-              Meet Our Team
-            </h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
-            <p className="text-lg text-text-muted max-w-2xl mx-auto">
-              The dedicated professionals who make Anna Marsi LLC a success.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {teamMembers.map((member) => (
-              <div key={member.id} className="bg-white rounded-xl shadow-sm overflow-hidden">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-heading font-bold text-text mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-primary font-semibold mb-4">
-                    {member.role}
-                  </p>
-                  <p className="text-text-muted leading-relaxed">
-                    {member.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-primary to-primary-dark">

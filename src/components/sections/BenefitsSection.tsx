@@ -74,7 +74,7 @@ class BenefitSectionComponent extends React.Component<BenefitSectionProps> {
     
     return (
       <div 
-        className={`flex flex-col lg:flex-row items-center gap-12 md:gap-16 lg:gap-20 xl:gap-24 mb-20 md:mb-24 lg:mb-32 xl:mb-40 ${
+        className={`flex flex-col lg:flex-row items-center gap-16 md:gap-20 lg:gap-24 xl:gap-32 mb-24 md:mb-32 lg:mb-40 xl:mb-48 ${
           index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
         }`}
       >
