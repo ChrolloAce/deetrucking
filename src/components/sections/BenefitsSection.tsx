@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { Phone, Mail } from 'lucide-react';
 
 interface Benefit {
   id: string;
@@ -176,15 +177,17 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:(305) 942-4054"
-              className="bg-white text-primary hover:bg-gray-100 font-semibold py-4 px-8 transition-colors duration-200 inline-flex items-center space-x-2 text-lg"
+              className="bg-white text-primary hover:bg-gray-100 font-semibold py-4 px-8 transition-colors duration-200 flex items-center justify-center space-x-2 text-lg w-full sm:w-48"
             >
-              <span>Call Now: (305) 942-4054</span>
+              <Phone className="w-5 h-5" />
+              <span>Call Now</span>
             </a>
             <a
               href="mailto:miamibrightstar@gmail.com"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-8 transition-all duration-200 inline-flex items-center space-x-2 text-lg"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-8 transition-all duration-200 flex items-center justify-center space-x-2 text-lg w-full sm:w-48"
             >
-              <span>Email Us Today</span>
+              <Mail className="w-5 h-5" />
+              <span>Email Us</span>
             </a>
           </div>
         </div>

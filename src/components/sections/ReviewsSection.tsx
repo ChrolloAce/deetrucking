@@ -85,38 +85,38 @@ class ReviewCard extends React.Component<ReviewCardProps> {
     const { review } = this.props;
     
     return (
-      <div className="bg-white p-8 rounded-2xl shadow-lg border border-border hover:shadow-xl transition-all duration-300 relative mx-4 h-full mt-8">
+      <div className="bg-white p-4 sm:p-6 lg:p-8 shadow-lg border border-border hover:shadow-xl transition-all duration-300 relative h-full mt-4 sm:mt-8 w-full max-w-full">
         {/* Quote Icon */}
-        <div className="absolute -top-4 -left-4 bg-primary rounded-full p-3">
-          <Quote className="w-6 h-6 text-white" />
+        <div className="absolute -top-2 sm:-top-4 -left-2 sm:-left-4 bg-primary p-2 sm:p-3">
+          <Quote className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
         </div>
 
         {/* Stars */}
-        <div className="flex items-center mb-6">
+        <div className="flex items-center mb-4 sm:mb-6 mt-2 sm:mt-0">
           {this.renderStars(review.rating)}
         </div>
 
         {/* Review Text */}
-        <p className="text-text-muted leading-relaxed mb-8 italic text-lg">
+        <p className="text-text-muted leading-relaxed mb-6 sm:mb-8 italic text-sm sm:text-base lg:text-lg">
           "{review.review}"
         </p>
 
         {/* Reviewer Info */}
-        <div className="border-t pt-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h4 className="font-heading font-semibold text-text text-xl">
+        <div className="border-t pt-4 sm:pt-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-3 sm:space-y-0">
+            <div className="flex-1">
+              <h4 className="font-heading font-semibold text-text text-lg sm:text-xl">
                 {review.name}
               </h4>
-              <p className="text-primary font-medium text-lg">
+              <p className="text-primary font-medium text-base sm:text-lg">
                 {review.role}
               </p>
-              <p className="text-text-muted">
+              <p className="text-text-muted text-sm sm:text-base">
                 {review.yearsWithCompany} • {review.location}
               </p>
             </div>
-            <div className="text-right">
-              <div className="bg-primary/10 text-primary px-4 py-2 rounded-full font-medium">
+            <div className="sm:text-right">
+              <div className="bg-primary/10 text-primary px-3 sm:px-4 py-1 sm:py-2 font-medium text-sm sm:text-base inline-block">
                 {review.yearsWithCompany}
               </div>
             </div>
@@ -182,14 +182,14 @@ export default class ReviewsSection extends React.Component<ReviewsSectionProps,
           </div>
 
           {/* Carousel for All Screen Sizes */}
-          <div className="relative px-4 pt-8">
-            <div className="overflow-hidden rounded-2xl">
+          <div className="relative px-2 sm:px-4 pt-4 sm:pt-8">
+            <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentReviewIndex * 100}%)` }}
               >
                 {reviews.map((review) => (
-                  <div key={review.id} className="w-full flex-shrink-0 px-8">
+                  <div key={review.id} className="w-full flex-shrink-0 px-2 sm:px-4 md:px-8">
                     <ReviewCard review={review} />
                   </div>
                 ))}

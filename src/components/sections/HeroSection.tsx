@@ -68,7 +68,7 @@ export default function HeroSection({
           <div className="max-w-3xl">
             {/* Overline */}
             <div className="mb-6">
-              <span className="text-primary font-medium text-base tracking-wide">
+              <span className="text-white font-medium text-base tracking-wide text-center block">
                 {content.overline}
               </span>
             </div>
@@ -88,16 +88,17 @@ export default function HeroSection({
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <button
                 onClick={() => contentManager.handleCTAClick()}
-                className="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+                className="bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-8 transition-colors duration-200 w-full sm:w-48 text-center flex items-center justify-center"
               >
                 {content.ctaText}
               </button>
 
               <a
                 href={`tel:${content.phoneNumber.replace(/\D/g, '')}`}
-                className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-8 transition-all duration-200 w-full sm:w-48 text-center flex items-center justify-center space-x-2"
               >
-                📞 {content.phoneNumber}
+                <Phone className="w-5 h-5" />
+                <span>Call Now</span>
               </a>
             </div>
           </div>

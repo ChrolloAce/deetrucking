@@ -9,7 +9,9 @@ import {
   MapPin,
   Star,
   Clock,
-  Shield
+  Shield,
+  Phone,
+  Mail
 } from 'lucide-react';
 
 interface DriverOpportunity {
@@ -173,7 +175,7 @@ export default function DriverOpportunitiesSection({ className = '' }: DriverOpp
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <div className="bg-primary/10 rounded-2xl p-8">
+          <div className="bg-primary/10 p-8">
             <h3 className="text-2xl font-heading font-bold text-text mb-4">
               Ready to Start Your Career?
             </h3>
@@ -184,15 +186,17 @@ export default function DriverOpportunitiesSection({ className = '' }: DriverOpp
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:(305) 942-4054"
-                className="btn-primary inline-flex items-center space-x-2"
+                className="bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-8 transition-colors duration-200 flex items-center justify-center space-x-2 w-full sm:w-48"
               >
-                <span>Call Now: (305) 942-4054</span>
+                <Phone className="w-5 h-5" />
+                <span>Call Now</span>
               </a>
               <a
                 href="mailto:miamibrightstar@gmail.com"
-                className="btn-secondary inline-flex items-center space-x-2"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-4 px-8 transition-all duration-200 flex items-center justify-center space-x-2 w-full sm:w-48"
               >
-                <span>Email: miamibrightstar@gmail.com</span>
+                <Mail className="w-5 h-5" />
+                <span>Email Us</span>
               </a>
             </div>
           </div>
