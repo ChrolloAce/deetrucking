@@ -75,6 +75,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <div className="py-12 md:py-16 lg:py-20 xl:py-24"></div>
+
       {/* Our Story Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -116,6 +118,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <div className="py-12 md:py-16 lg:py-20 xl:py-24"></div>
+
       {/* Stats Section */}
       <section className="section-padding bg-background-light">
         <div className="container-custom">
@@ -145,6 +149,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <div className="py-12 md:py-16 lg:py-20 xl:py-24"></div>
 
       {/* Values Section */}
       <section className="section-padding bg-white">
@@ -208,7 +214,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-
+      <div className="py-12 md:py-16 lg:py-20 xl:py-24"></div>
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-primary to-primary-dark">

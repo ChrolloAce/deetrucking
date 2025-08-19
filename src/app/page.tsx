@@ -18,15 +18,27 @@ export default function HomePage() {
       
       <HeroSection />
       
+      <div className="py-8 md:py-12 lg:py-16 xl:py-20"></div>
+      
       <ValuePropositionsSection />
+      
+      <div className="py-8 md:py-12 lg:py-16 xl:py-20"></div>
       
       <TruckGallerySection />
       
+      <div className="py-8 md:py-12 lg:py-16 xl:py-20"></div>
+      
       <BenefitsSection />
+      
+      <div className="py-8 md:py-12 lg:py-16 xl:py-20"></div>
       
       <DriverOpportunitiesSection />
       
+      <div className="py-8 md:py-12 lg:py-16 xl:py-20"></div>
+      
       <ReviewsSection />
+      
+      <div className="py-8 md:py-12 lg:py-16 xl:py-20"></div>
       
       <Footer />
       

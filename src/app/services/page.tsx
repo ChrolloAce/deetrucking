@@ -138,6 +138,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <div className="py-12 md:py-16 lg:py-20 xl:py-24"></div>
+
       {/* Services Overview */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -211,6 +213,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <div className="py-12 md:py-16 lg:py-20 xl:py-24"></div>
+
       {/* Why Choose Us */}
       <section className="section-padding bg-background-light">
         <div className="container-custom">
@@ -244,6 +248,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <div className="py-12 md:py-16 lg:py-20 xl:py-24"></div>
 
       {/* Fleet Information */}
       <section className="section-padding bg-white">
@@ -291,6 +297,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <div className="py-12 md:py-16 lg:py-20 xl:py-24"></div>
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-primary to-primary-dark">

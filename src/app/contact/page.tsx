@@ -119,6 +119,8 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <div className="py-12 md:py-16 lg:py-20 xl:py-24"></div>
+
       {/* Contact Information */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -150,6 +152,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <div className="py-12 md:py-16 lg:py-20 xl:py-24"></div>
 
       {/* Contact Form and Map */}
       <section className="section-padding bg-background-light">
