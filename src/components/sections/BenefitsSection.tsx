@@ -176,15 +176,15 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:(305) 942-4054"
-              className="bg-white text-primary hover:bg-gray-100 font-semibold py-4 px-8 rounded-xl transition-colors duration-200 inline-flex items-center space-x-2 text-lg"
+              className="bg-white text-primary hover:bg-gray-100 font-semibold py-4 px-8 transition-colors duration-200 inline-flex items-center space-x-2 text-lg"
             >
-              <span>📞 Call Now: (305) 942-4054</span>
+              <span>Call Now: (305) 942-4054</span>
             </a>
             <a
               href="mailto:miamibrightstar@gmail.com"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-8 rounded-xl transition-all duration-200 inline-flex items-center space-x-2 text-lg"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-8 transition-all duration-200 inline-flex items-center space-x-2 text-lg"
             >
-              <span>✉️ Email Us Today</span>
+              <span>Email Us Today</span>
             </a>
           </div>
         </div>

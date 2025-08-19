@@ -6,28 +6,37 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   
   body {
     @apply font-body text-text antialiased;
+    overflow-x: hidden;
+    width: 100%;
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-semibold;
   }
+  
+  * {
+    max-width: 100%;
+  }
 }
 
 @layer components {
   .container-custom {
-    @apply max-w-container mx-auto px-gutter;
+    @apply max-w-container mx-auto px-4 sm:px-6 lg:px-gutter;
+    width: 100%;
+    overflow-x: hidden;
   }
   
   .btn-primary {
-    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-md transition-colors duration-200;
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 transition-colors duration-200;
   }
   
   .btn-secondary {
-    @apply bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-6 rounded-md transition-all duration-200;
+    @apply bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-6 transition-all duration-200;
   }
   
   .section-padding {

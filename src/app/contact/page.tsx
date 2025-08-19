@@ -323,7 +323,7 @@ export default function ContactPage() {
               
               {/* Map Instructions */}
               <div className="text-center text-sm text-text-muted mb-8">
-                <p>📍 Click on the map to get directions to our location</p>
+                <p>Click on the map to get directions to our location</p>
                 <p className="mt-1">1758 NE 163rd Street, North Miami Beach, FL 33162</p>
               </div>
 

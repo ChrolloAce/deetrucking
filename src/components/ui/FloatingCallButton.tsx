@@ -35,25 +35,23 @@ export default function FloatingCallButton({
   const callManager = new CallButtonManager(phoneNumber);
 
   return (
-    <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
+    <div className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 ${className}`}>
       <button
         onClick={() => callManager.handleCall()}
-        className="group bg-primary hover:bg-primary-dark text-white rounded-full p-4 shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 animate-pulse hover:animate-none"
+        className="group bg-primary hover:bg-primary-dark text-white p-3 sm:p-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center"
         aria-label={`Call ${callManager.formatPhoneForDisplay()}`}
       >
-        <div className="flex items-center justify-center">
-          <Phone className="w-6 h-6 group-hover:animate-bounce" />
-        </div>
+        <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
         
-        {/* Tooltip */}
-        <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-background-dark text-white px-3 py-2 rounded-lg text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
+        {/* Tooltip - Hidden on mobile */}
+        <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-background-dark text-white px-3 py-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap hidden sm:block">
           Call {callManager.formatPhoneForDisplay()}
           <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-background-dark border-y-4 border-y-transparent"></div>
         </div>
       </button>
 
       {/* Ripple Effect */}
-      <div className="absolute inset-0 rounded-full bg-primary opacity-20 animate-ping"></div>
+      <div className="absolute inset-0 bg-primary opacity-20 animate-ping w-12 h-12 sm:w-16 sm:h-16"></div>
     </div>
   );
 }
